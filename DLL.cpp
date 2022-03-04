@@ -6,7 +6,6 @@ struct Node {
 	Node *next;
 	Node *prev;
 }*head, *tail, *cur, *del, *newNode, *temp;
-
 //Create
   void createDLL(int val) {
   	head = new Node();
@@ -38,7 +37,6 @@ struct Node {
 	  cur = newNode->next;
 	  cur->prev = newNode;
       }
-
   void addLast(int val) {
 	  newNode = new Node();
 	  newNode->data = val;
@@ -94,9 +92,8 @@ struct Node {
 		addLast(x);
 		}
 		printDLL;
-	  int pilihan;
-      do {
-
+	int pilihan;
+      	do {
         std::cout << "\n\n----------DOUBLE LINKED LIST-----------\n";
         std::cout << "Pilih menu : \n";
         std::cout << "1. tambah data pertama\n";
@@ -125,6 +122,19 @@ struct Node {
         case 5 :
             removeMid(3);
         	break;
+        case 6 :
+            removeLast();
+        	break;
+        case 7 :
+            printDLL();
+            break;
+        default :
+            std::cout << "---------EXIT---------";
+            break;
+        }
+        }while(pilihan <= 7);
+        getch();
+}
         case 6 :
             removeLast();
         	break;
