@@ -7,7 +7,7 @@ struct Node {
 	Node *prev;
 }*head, *tail, *cur, *del, *newNode, *temp;
 
-//	Buat
+//Create
   void createDLL(int val) {
   	head = new Node();
   	head->data = val;
@@ -15,7 +15,7 @@ struct Node {
 	  head->prev = NULL;
 	  tail = head;
       }
-//	Insertion
+//Insertion
   void addFirst(int val) {
 	  newNode = new Node();
 	  newNode->data = val;
@@ -47,7 +47,7 @@ struct Node {
 	  tail->next = newNode;
 	  tail = newNode;
       }
-//	Deletion
+//Deletion
   void removeFirst() {
 	  del = head;
 	  head = del->next;
